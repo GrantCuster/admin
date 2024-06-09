@@ -1,18 +1,17 @@
 import { useMemo } from "react";
 
 function App() {
-
   const greeting = useMemo(() => {
     // Greet based on time of day
     const now = new Date();
     const hours = now.getHours();
     if (hours < 12) {
-      return 'Good morning';
+      return "Good morning";
     }
     if (hours < 18) {
-      return 'Good afternoon';
+      return "Good afternoon";
     }
-    return 'Good evening';
+    return "Good evening";
   }, []);
 
   return (
@@ -23,7 +22,8 @@ function App() {
         <div className="">Tools</div>
         <div>
           <div>
-           - <a
+            -{" "}
+            <a
               href="/uploader"
               className="text-[var(--yellow)] hover:text-[var(--bright-yellow)]"
             >
@@ -31,6 +31,18 @@ function App() {
             </a>
           </div>
         </div>
+        <div className="mt-4">Links</div>
+        <div>
+          <div>
+            -{" "}
+            <a
+              href="https://github.com/grantcuster/nix-simple"
+              className="text-[var(--green)] hover:text-[var(--bright-green)]"
+            >
+              Nix simple repo
+            </a>
+          </div>
+          </div>
       </div>
     </div>
   );
